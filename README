@@ -1,0 +1,3 @@
+描述：Libevent库实现的HTTP服务器
+所用技术：Libevent库搭建服务器框架，设置回调函数，http请求与响应处理，unix文件操作。
+实现流程：创建event_base->创建服务器监听连接器evconnlistener，并设置回调函数，->监听回调函数中创建bufferevent对象，设置对象的read，write，event回调，并设置读写缓冲区->read回调处理客户端http请求，解析请求资源，发送给客户端->启动循环监听->释放资源。
